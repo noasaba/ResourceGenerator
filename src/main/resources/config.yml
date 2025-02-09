@@ -1,0 +1,5 @@
+last_world_id: 0
+create_commands:
+  - "gamerule keepInventory true"
+  - "gamerule doDaylightCycle false"
+  - "difficulty normal"
