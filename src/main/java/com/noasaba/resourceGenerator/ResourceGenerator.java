@@ -20,27 +20,39 @@ public final class ResourceGenerator extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        // プラグインのバージョンを取得
+        String pluginVersion = getDescription().getVersion();
+
+        // コンソールに起動メッセージを表示
+        getLogger().info("== === ==");
+        getLogger().info("ResourceGenerator v" + pluginVersion + " - Developed by NOASABA (by nanosize)");
+        getLogger().info("== === ==");
+
         // config.yml を生成・読み込み
         saveDefaultConfig();
         config = getConfig();
 
-        // Multiverse-Core プラグインを取得
+        // Multiverse-Core の存在確認 & 取得
         if (getServer().getPluginManager().getPlugin("Multiverse-Core") instanceof MultiverseCore) {
             mvCore = (MultiverseCore) getServer().getPluginManager().getPlugin("Multiverse-Core");
             if (mvCore != null) {
                 worldManager = mvCore.getMVWorldManager();
+                getLogger().info("Multiverse-Core を検出しました。");
             }
         } else {
             getLogger().severe("Multiverse-Core が見つからないため、ワールド作成機能を使用できません。");
         }
 
-        // Multiverse-NetherPortals の存在確認 (リンク設定に使用)
-        if (getServer().getPluginManager().getPlugin("Multiverse-NetherPortals") == null) {
+        // Multiverse-NetherPortals の存在確認
+        if (getServer().getPluginManager().getPlugin("Multiverse-NetherPortals") != null) {
+            getLogger().info("Multiverse-NetherPortals を検出しました。");
+        } else {
             getLogger().severe("Multiverse-NetherPortals が見つからないため、ポータルリンク機能を使用できません。");
         }
 
         getLogger().info("ResourceGeneratorが有効になりました。");
     }
+
 
     @Override
     public void onDisable() {
