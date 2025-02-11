@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ResourceGenerator.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ResourceGenerator.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.noasaba.ResourceGenerator.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.noasaba.ResourceGenerator.main.iml" />
     </modules>
   </component>
 </project>
