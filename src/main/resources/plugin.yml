@@ -1,18 +1,18 @@
 name: ResourceGenerator
 version: 1.0
 main: com.noasaba.resourceGenerator.ResourceGenerator
-api-version: 1.16
+api-version: 1.21
 depend:
   - Multiverse-Core
   - Multiverse-NetherPortals
 
 commands:
   resource:
-    description: 資源ワールド管理コマンド
-    usage: /resource create
+    description: 資源ワールドを作成し、設定コマンドを適用する
+    usage: /resource create [-s <seed>]
     permission: resourcegenerator.admin
 
 permissions:
   resourcegenerator.admin:
-    description: 資源ワールドの管理権限
+    description: 資源ワールド管理権限
     default: op

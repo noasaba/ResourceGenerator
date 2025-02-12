@@ -1,5 +1,15 @@
-last_world_id: 0
-create_commands:
-  - "gamerule keepInventory true"
-  - "gamerule doDaylightCycle false"
-  - "difficulty normal"
+# Do not change the following settings:
+configVersion: 1  # DO NOT CHANGE
+last_world_id: 0  # DO NOT CHANGE
+
+master:
+  - "gamerule doWeatherCycle false"
+
+dimension_commands:
+  overworld:
+    - "gamerule keepInventory true"
+    - "gamerule doDaylightCycle false"
+  nether:
+    - "gamerule mobGriefing false"
+  end:
+    - "gamerule keepInventory false"
